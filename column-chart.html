@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Column chart</title>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	</head>
+	<body>
+	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+	<script>
+	Highcharts.chart('container', {
+	    chart: {
+	        type: 'column'
+	    },
+	    title: {
+	        text: 'Expenses Report 2016'
+	    },
+	    xAxis: {
+	        categories: [
+	            'Jan',
+	            'Feb',
+	            'Mar',
+	            'Apr',
+	            'May',
+	            'Jun',
+	            'Jul',
+	            'Aug',
+	            'Sep',
+	            'Oct',
+	            'Nov',
+	            'Dec'
+	        ]
+	    },
+	    yAxis: {
+	        min: 0,
+	        title: {
+	            text: 'Expenses'
+	        }
+	    },
+	    series: [{
+	        name: 'Insurance',
+	        data: [2083.6, 2028.8, 2098.5, 2013.4, 2006.0, 2184.5, 2005.0, 2204.3, 2091.2, 2183.5, 2206.6, 2192.3]
+
+	    },{
+	        name: 'Medical',
+	        data: [1049.9, 1021.5, 1006.4, 1129.2, 1064.0, 1006.0, 1095.6, 1148.5, 1216.4, 1194.1, 1095.6, 1054.4]
+
+	    },{
+	        name: 'Grocery',
+	        data: [949.9, 971.5, 906.4, 929.2, 944.0, 876.0, 735.6, 448.5, 916.4, 894.1, 795.6, 854.4]
+
+	    } ]
+	});
+	</script>
+	</body>
+</html>

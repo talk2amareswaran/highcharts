@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Pie Chart Demo</title>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	</head>
+	<body>
+		<div id="container" style="height: 400px"></div>
+		<script>
+		 Highcharts.setOptions({
+		        colors: ['red', 'green', '#ED561B', '#DDDF00', '#24CBE5', '#64E572']
+		    });
+		 
+		Highcharts.chart('container', {
+		    chart: {
+		        type: 'pie',
+		        options3d: {
+		            enabled: true,
+		            alpha: 45,
+		            beta: 0
+		        }
+		    },
+		    title: {
+		        text: 'Expense Report - Jan 2017'
+		    },
+		    tooltip: {
+		        pointFormat: '{series.name}: <b>{point.y}</b>'
+		    },
+		    plotOptions: {
+		        pie: {
+		            allowPointSelect: true,
+		            cursor: 'pointer',
+		            depth: 35,
+		            dataLabels: {
+		                enabled: true,
+		                format: '{point.name}'
+		            }
+		        }
+		    },
+		    series: [{
+		        type: 'pie',
+		        name: 'Expense',
+		        data: [
+		            ['Medical', 2345.0],
+		            ['Inusrance', 2612.8],
+		           ['Telephone',1214.4],
+		            ['Internet', 1812.5],
+		            ['Home Rent', 2446.2],
+		            ['Grocery', 1012.7]
+		        ]
+		    }]
+		});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>3d Donut</title>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	</head>
+	<body>
+		<div id="container" style="height: 400px"></div>
+		<script>
+		Highcharts.chart('container', {
+		    chart: {
+		        type: 'pie',
+		        options3d: {
+		            enabled: true,
+		            alpha: 45
+		        }
+		    },
+		    title: {
+		        text: 'Expense report Jan 2017'
+		    },
+		    subtitle: {
+		        text: 'Expense report'
+		    },
+		    plotOptions: {
+		        pie: {
+		            innerSize: 100,
+		            depth: 45
+		        }
+		    },
+		    series: [{
+		        name: 'Expense',
+		        data: [
+		            ['Medical', 1348],
+		            ['Insurance', 1254],
+		            ['Telephone', 980],
+		            ['Internet', 1289],
+		            ['Grocery', 1098]
+		        ]
+		    }]
+		});
+		</script>
+	</body>
+</html>
